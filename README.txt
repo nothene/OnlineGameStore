@@ -1,1 +1,1 @@
-Online Game Store Interface using Windows Form in C#
+Online Game Store Admin Interface using Windows Form in C#
