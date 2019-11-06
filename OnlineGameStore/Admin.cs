@@ -28,6 +28,8 @@ namespace OnlineGameStore
             this.login.Enabled = false;
             this.login.FlatAppearance.BorderSize = 0;
             this.cancel.FlatAppearance.BorderSize = 0;
+            Account acc = new Account();
+            acc.Show();
         }
 
         protected override void OnLoad(EventArgs e)
@@ -92,8 +94,9 @@ namespace OnlineGameStore
         {
             if(textBox1.Text == "admin" && textBox2.Text == "admin")
             {
-                this.Close();
-
+                //this.Close();
+                Form index = new Index();
+                index.Show();
             } else
             {
                 MessageBox.Show("Username or Password is invalid!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

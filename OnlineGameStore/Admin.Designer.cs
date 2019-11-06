@@ -63,6 +63,7 @@
             // 
             this.cancel.BackColor = System.Drawing.Color.SlateBlue;
             this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancel.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.cancel, "cancel");
             this.cancel.Name = "cancel";
             this.cancel.UseVisualStyleBackColor = false;
