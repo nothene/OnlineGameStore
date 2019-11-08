@@ -59,3 +59,6 @@ C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGame
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.pdb
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Index.resources
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Account.resources
+C:\Users\Thenone\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Account.resources
+C:\Users\Thenone\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Games.resources
+C:\Users\Thenone\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Index.resources
