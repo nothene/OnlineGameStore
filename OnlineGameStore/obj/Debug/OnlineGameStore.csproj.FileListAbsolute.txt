@@ -62,5 +62,8 @@ C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGame
 C:\Users\Thenone\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Account.resources
 C:\Users\Thenone\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Games.resources
 C:\Users\Thenone\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Index.resources
+<<<<<<< HEAD
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Games.resources
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Purchase.resources
+=======
+>>>>>>> 2474241827050bd29a7b306afa2095c478d92797

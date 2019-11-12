@@ -37,18 +37,18 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.display_name = new System.Windows.Forms.Label();
-            this.unused_1 = new System.Windows.Forms.Label();
+            this.date_joined = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.hours_played = new System.Windows.Forms.Label();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.hours_played = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.date_joined = new System.Windows.Forms.Label();
+            this.unused_1 = new System.Windows.Forms.Label();
+            this.display_name = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,7 @@
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.Visible = false;
             this.listView1.Enter += new System.EventHandler(this.listView1_Enter);
             // 
             // columnHeader1
@@ -153,32 +154,49 @@
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox1
+            // date_joined
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.date_joined.AutoSize = true;
+            this.date_joined.Location = new System.Drawing.Point(262, 79);
+            this.date_joined.Name = "date_joined";
+            this.date_joined.Size = new System.Drawing.Size(35, 13);
+            this.date_joined.TabIndex = 9;
+            this.date_joined.Text = "label1";
             // 
-            // display_name
+            // label1
             // 
-            this.display_name.AutoSize = true;
-            this.display_name.Location = new System.Drawing.Point(188, 26);
-            this.display_name.Name = "display_name";
-            this.display_name.Size = new System.Drawing.Size(75, 13);
-            this.display_name.TabIndex = 1;
-            this.display_name.Text = "Display_Name";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(196, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Date Joined:";
             // 
-            // unused_1
+            // hours_played
             // 
-            this.unused_1.AutoSize = true;
-            this.unused_1.Location = new System.Drawing.Point(190, 53);
-            this.unused_1.Name = "unused_1";
-            this.unused_1.Size = new System.Drawing.Size(71, 13);
-            this.unused_1.TabIndex = 2;
-            this.unused_1.Text = "Hours Online:";
+            this.hours_played.AutoSize = true;
+            this.hours_played.Location = new System.Drawing.Point(262, 53);
+            this.hours_played.Name = "hours_played";
+            this.hours_played.Size = new System.Drawing.Size(35, 13);
+            this.hours_played.TabIndex = 7;
+            this.hours_played.Text = "label1";
+            // 
+            // listView3
+            // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5});
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(406, 181);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(146, 200);
+            this.listView3.TabIndex = 6;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Friends";
+            this.columnHeader5.Width = 140;
             // 
             // listView2
             // 
@@ -201,59 +219,40 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.DisplayIndex = 1;
             this.columnHeader3.Text = "Hours Played";
             this.columnHeader3.Width = 89;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.DisplayIndex = 2;
             this.columnHeader4.Text = "Genre";
             this.columnHeader4.Width = 110;
             // 
-            // listView3
+            // unused_1
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5});
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(406, 181);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(146, 200);
-            this.listView3.TabIndex = 6;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.unused_1.AutoSize = true;
+            this.unused_1.Location = new System.Drawing.Point(190, 53);
+            this.unused_1.Name = "unused_1";
+            this.unused_1.Size = new System.Drawing.Size(71, 13);
+            this.unused_1.TabIndex = 2;
+            this.unused_1.Text = "Hours Online:";
             // 
-            // columnHeader5
+            // display_name
             // 
-            this.columnHeader5.Text = "Friends";
-            this.columnHeader5.Width = 140;
+            this.display_name.AutoSize = true;
+            this.display_name.Location = new System.Drawing.Point(188, 26);
+            this.display_name.Name = "display_name";
+            this.display_name.Size = new System.Drawing.Size(75, 13);
+            this.display_name.TabIndex = 1;
+            this.display_name.Text = "Display_Name";
             // 
-            // hours_played
+            // pictureBox1
             // 
-            this.hours_played.AutoSize = true;
-            this.hours_played.Location = new System.Drawing.Point(262, 53);
-            this.hours_played.Name = "hours_played";
-            this.hours_played.Size = new System.Drawing.Size(35, 13);
-            this.hours_played.TabIndex = 7;
-            this.hours_played.Text = "label1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(196, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Date Joined:";
-            // 
-            // date_joined
-            // 
-            this.date_joined.AutoSize = true;
-            this.date_joined.Location = new System.Drawing.Point(262, 79);
-            this.date_joined.Name = "date_joined";
-            this.date_joined.Size = new System.Drawing.Size(35, 13);
-            this.date_joined.TabIndex = 9;
-            this.date_joined.Text = "label1";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Account
             // 
