@@ -23,7 +23,7 @@ namespace OnlineGameStore
             close.FlatAppearance.BorderSize = 0;
             account.FlatAppearance.BorderSize = 0;
 
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-P8ASE2D\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
+            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
             String query = @"Select count(*) From Account";
             String num = "";
@@ -87,6 +87,13 @@ namespace OnlineGameStore
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            Purchase purchase = new Purchase();
+            purchase.Show();
+            this.Close();
         }
     }
 }

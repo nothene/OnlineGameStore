@@ -22,7 +22,7 @@ namespace OnlineGameStore
 
         private void Load_Data()
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-P8ASE2D\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
+            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
             //String query = @"Select username, password, balance, display_name, creation_date, total_hours From Account";
             String query = @"Select username From Account";
@@ -92,7 +92,7 @@ namespace OnlineGameStore
         {
             try
             {
-                SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-P8ASE2D\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
+                SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
                 String name = listView1.SelectedItems[0].Text;
                 String query = "Select user_id, username, password, balance, display_name, creation_date, total_hours From Account where username = '" + name + "';";
