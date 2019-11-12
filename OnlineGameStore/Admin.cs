@@ -25,6 +25,7 @@ namespace OnlineGameStore
         }
         private void Admin_Load(object sender, EventArgs e)
         {
+            this.Hide();
             this.login.Enabled = false;
             this.login.FlatAppearance.BorderSize = 0;
             this.cancel.FlatAppearance.BorderSize = 0;
@@ -101,6 +102,26 @@ namespace OnlineGameStore
             {
                 MessageBox.Show("Username or Password is invalid!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void login_MouseHover(object sender, EventArgs e)
+        {
+            login.FlatAppearance.BorderColor = Color.White;
+        }
+
+        private void login_MouseLeave(object sender, EventArgs e)
+        {
+            login.FlatAppearance.BorderColor = Color.SlateBlue;
+        }
+
+        private void cancel_MouseLeave(object sender, EventArgs e)
+        {
+            cancel.FlatAppearance.BorderColor = Color.SlateBlue;
+        }
+
+        private void cancel_MouseHover(object sender, EventArgs e)
+        {
+            cancel.FlatAppearance.BorderColor = Color.White;
         }
     }
 }

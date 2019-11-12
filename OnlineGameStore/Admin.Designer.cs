@@ -41,11 +41,14 @@
             // login
             // 
             this.login.BackColor = System.Drawing.Color.SlateBlue;
+            this.login.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.login.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.login, "login");
             this.login.Name = "login";
             this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.Login_Click);
+            this.login.MouseLeave += new System.EventHandler(this.login_MouseLeave);
+            this.login.MouseHover += new System.EventHandler(this.login_MouseHover);
             // 
             // label1
             // 
@@ -68,6 +71,8 @@
             this.cancel.Name = "cancel";
             this.cancel.UseVisualStyleBackColor = false;
             this.cancel.Click += new System.EventHandler(this.button1_Click);
+            this.cancel.MouseLeave += new System.EventHandler(this.cancel_MouseLeave);
+            this.cancel.MouseHover += new System.EventHandler(this.cancel_MouseHover);
             // 
             // textBox1
             // 
