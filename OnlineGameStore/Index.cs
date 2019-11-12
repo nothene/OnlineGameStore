@@ -69,7 +69,9 @@ namespace OnlineGameStore
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            Games games = new Games();
+            games.Show();
+            this.Close();
         }
 
         private void Close_MouseHover(object sender, EventArgs e)

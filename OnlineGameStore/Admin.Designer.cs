@@ -40,10 +40,10 @@
             // 
             // login
             // 
-            this.login.BackColor = System.Drawing.Color.SlateBlue;
-            this.login.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.login.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.login, "login");
+            this.login.BackColor = System.Drawing.Color.SlateBlue;
+            this.login.FlatAppearance.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.login.FlatAppearance.BorderSize = 0;
             this.login.Name = "login";
             this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.Login_Click);
@@ -66,6 +66,7 @@
             // 
             this.cancel.BackColor = System.Drawing.Color.SlateBlue;
             this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancel.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
             this.cancel.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.cancel, "cancel");
             this.cancel.Name = "cancel";
@@ -99,6 +100,8 @@
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Name = "label3";
             // 
             // Admin
@@ -119,6 +122,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Admin_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Admin_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Admin_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,11 +13,34 @@ namespace OnlineGameStore
 {
     public partial class Account : Form
     {
+        private bool mouseDown;
+        private Point last;
         public Account()
         {
             InitializeComponent();
             textBox1.ForeColor = Color.Gray;
             textBox1.Text = "Search...";
+        }
+
+        private void Account_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            last = e.Location;
+        }
+
+        private void Account_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - last.X) + e.X, (this.Location.Y - last.Y) + e.Y);
+                this.Update();
+            }
+        }
+
+        private void Account_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
 
         private void Load_Data()
@@ -35,11 +58,6 @@ namespace OnlineGameStore
             while (reader.Read())
             {
                 listView1.Items.Add(reader[0].ToString());
-                int index = listView1.Items.Count - 1;
-                //for(int i = 1; i <= 5; i++)
-                //{
-                //    listView1.Items[index].SubItems.Add(reader[i].ToString());
-                //}
             }
 
             reader.Close();

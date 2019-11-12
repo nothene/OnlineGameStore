@@ -40,8 +40,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // close
@@ -67,7 +65,7 @@
             this.account.FlatAppearance.BorderSize = 0;
             this.account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.account.ForeColor = System.Drawing.Color.White;
-            this.account.Location = new System.Drawing.Point(323, 109);
+            this.account.Location = new System.Drawing.Point(320, 104);
             this.account.Name = "account";
             this.account.Size = new System.Drawing.Size(161, 100);
             this.account.TabIndex = 2;
@@ -94,7 +92,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(490, 109);
+            this.button1.Location = new System.Drawing.Point(487, 104);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(161, 100);
             this.button1.TabIndex = 4;
@@ -110,7 +108,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(323, 216);
+            this.button2.Location = new System.Drawing.Point(487, 210);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 100);
             this.button2.TabIndex = 5;
@@ -126,7 +124,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(490, 216);
+            this.button3.Location = new System.Drawing.Point(320, 210);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(161, 100);
             this.button3.TabIndex = 6;
@@ -151,7 +149,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(318, 64);
+            this.label3.Location = new System.Drawing.Point(315, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 26);
             this.label3.TabIndex = 8;
@@ -202,36 +200,12 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Registered Accounts: ";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(26, 394);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 20);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Placeholder";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(26, 361);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 20);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Registered Accounts: ";
-            // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(724, 450);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
@@ -266,7 +240,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
     }
 }
