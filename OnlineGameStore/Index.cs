@@ -97,5 +97,20 @@ namespace OnlineGameStore
             purchase.Show();
             this.Close();
         }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
