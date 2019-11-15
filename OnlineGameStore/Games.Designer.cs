@@ -32,6 +32,8 @@
             this.back = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.link_label = new System.Windows.Forms.LinkLabel();
             this.genre_label = new System.Windows.Forms.Label();
             this.studio_label = new System.Windows.Forms.Label();
@@ -50,8 +52,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -89,6 +91,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel2.Controls.Add(this.listView2);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.richTextBox1);
             this.panel2.Controls.Add(this.link_label);
@@ -106,11 +109,34 @@
             this.panel2.TabIndex = 57;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(25, 459);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(157, 24);
+            this.label8.TabIndex = 87;
+            this.label8.Text = "About This Game";
+            this.label8.Click += new System.EventHandler(this.Label8_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.AliceBlue;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.richTextBox1.Location = new System.Drawing.Point(29, 489);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(973, 172);
+            this.richTextBox1.TabIndex = 86;
+            this.richTextBox1.Text = "";
+            // 
             // link_label
             // 
             this.link_label.AutoSize = true;
             this.link_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_label.Location = new System.Drawing.Point(768, 170);
+            this.link_label.Location = new System.Drawing.Point(768, 213);
+            this.link_label.MaximumSize = new System.Drawing.Size(230, 0);
             this.link_label.Name = "link_label";
             this.link_label.Size = new System.Drawing.Size(94, 24);
             this.link_label.TabIndex = 66;
@@ -121,17 +147,20 @@
             // 
             this.genre_label.AutoSize = true;
             this.genre_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genre_label.Location = new System.Drawing.Point(768, 135);
+            this.genre_label.Location = new System.Drawing.Point(768, 143);
+            this.genre_label.MaximumSize = new System.Drawing.Size(230, 0);
             this.genre_label.Name = "genre_label";
             this.genre_label.Size = new System.Drawing.Size(70, 24);
             this.genre_label.TabIndex = 64;
             this.genre_label.Text = "label12";
+            this.genre_label.Click += new System.EventHandler(this.Genre_label_Click);
             // 
             // studio_label
             // 
             this.studio_label.AutoSize = true;
             this.studio_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studio_label.Location = new System.Drawing.Point(768, 96);
+            this.studio_label.Location = new System.Drawing.Point(768, 73);
+            this.studio_label.MaximumSize = new System.Drawing.Size(230, 0);
             this.studio_label.Name = "studio_label";
             this.studio_label.Size = new System.Drawing.Size(60, 24);
             this.studio_label.TabIndex = 63;
@@ -142,7 +171,7 @@
             this.title_label.AutoSize = true;
             this.title_label.BackColor = System.Drawing.Color.AliceBlue;
             this.title_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title_label.Location = new System.Drawing.Point(692, 29);
+            this.title_label.Location = new System.Drawing.Point(23, 26);
             this.title_label.Name = "title_label";
             this.title_label.Size = new System.Drawing.Size(241, 33);
             this.title_label.TabIndex = 62;
@@ -152,7 +181,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(640, 360);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +193,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.AliceBlue;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(713, 170);
+            this.label5.Location = new System.Drawing.Point(713, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 24);
             this.label5.TabIndex = 51;
@@ -175,7 +204,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.AliceBlue;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(694, 135);
+            this.label6.Location = new System.Drawing.Point(694, 143);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 24);
             this.label6.TabIndex = 52;
@@ -186,11 +215,12 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.AliceBlue;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(694, 96);
+            this.label7.Location = new System.Drawing.Point(694, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 24);
             this.label7.TabIndex = 53;
             this.label7.Text = "Studio:";
+            this.label7.Click += new System.EventHandler(this.Label7_Click);
             // 
             // pictureBox2
             // 
@@ -209,7 +239,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(8, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(236, 47);
+            this.label4.Size = new System.Drawing.Size(236, 34);
             this.label4.TabIndex = 49;
             this.label4.Text = "Title";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,10 +281,11 @@
             this.columnHeader1});
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(8, 61);
+            this.listView1.Location = new System.Drawing.Point(8, 48);
             this.listView1.Margin = new System.Windows.Forms.Padding(0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(236, 566);
+            this.listView1.Size = new System.Drawing.Size(236, 579);
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 46;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -303,25 +334,25 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
-            // richTextBox1
+            // listView2
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.AliceBlue;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.richTextBox1.Location = new System.Drawing.Point(29, 435);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(973, 214);
-            this.richTextBox1.TabIndex = 86;
-            this.richTextBox1.Text = "";
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2});
+            this.listView2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.listView2.FullRowSelect = true;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(698, 292);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(304, 141);
+            this.listView2.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listView2.TabIndex = 88;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
             // 
-            // label8
+            // columnHeader2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 401);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(157, 24);
-            this.label8.TabIndex = 87;
-            this.label8.Text = "About This Game";
+            this.columnHeader2.Text = "Who Have Played";
+            this.columnHeader2.Width = 275;
             // 
             // Games
             // 
@@ -378,5 +409,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

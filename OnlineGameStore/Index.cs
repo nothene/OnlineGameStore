@@ -65,22 +65,13 @@ namespace OnlineGameStore
             connection.Close();
         }
 
-        private void Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void Account_Click(object sender, EventArgs e)
         {
             this.Close();
             Account account = new Account();
             account.Show();
         }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Button2_Click(object sender, EventArgs e)
         {

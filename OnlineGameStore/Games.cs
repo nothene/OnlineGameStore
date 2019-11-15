@@ -65,6 +65,79 @@ namespace OnlineGameStore
             connection.Close();
         }
 
+        private void Load_Game()
+        {
+            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
+
+            String title = listView1.SelectedItems[0].Text.ToString();
+            String query = "Select game_id, studio, genre, link, image_path, about from Games where title = '" + title + "';";
+            String gid = "";
+            String studio = "";
+            String genre = "";
+            String link = "";
+            String path = "";
+            String about = "";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            //MessageBox.Show(query);
+
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                gid = reader[0].ToString();
+                studio = reader[1].ToString();
+                genre = reader[2].ToString();
+                link = reader[3].ToString();
+                path = reader[4].ToString();
+                about = reader[5].ToString();
+            }
+
+            title_label.Text = title;
+            studio_label.Text = studio;
+            genre_label.Text = genre;
+            link_label.Text = link;
+            pictureBox1.Image = System.Drawing.Bitmap.FromFile(path);
+            richTextBox1.Text = about;
+
+            reader.Close();
+
+            listView2.Items.Clear();
+
+            query = "Select distinct user_id from Library where game_id = " + gid + ";"; 
+            command = new SqlCommand(query, connection);
+
+            reader = command.ExecuteReader();
+
+            String[] arr = new String[1000];
+
+            int idx = 0;
+
+            while (reader.Read())
+            {
+                arr[idx] = reader[0].ToString();
+                idx++;
+            }
+
+            reader.Close();
+            command.Dispose();
+
+            for (int i = 0; i < idx; i++)
+            {
+                query = "Select display_name from Account where user_id = " + arr[i].ToString() + ";";
+                command = new SqlCommand(query, connection);
+                reader = command.ExecuteReader();
+                reader.Read();
+                listView2.Items.Add(reader[0].ToString());
+                reader.Close();
+                command.Dispose();
+            }
+
+            command.Dispose();
+            connection.Close();
+        }
+
         private void Games_Load(object sender, EventArgs e)
         {
             Load_Data();
@@ -73,6 +146,7 @@ namespace OnlineGameStore
                 listView1.Items[0].Selected = true;
                 listView1.Select();
             }
+            Load_Game();
         }
 
         private void Back_Click_1(object sender, EventArgs e)
@@ -84,35 +158,7 @@ namespace OnlineGameStore
 
         private void ListView1_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
-
-            String title = listView1.SelectedItems[0].Text.ToString();
-            String query = "Select studio, genre, link from Games where title = '" + title + "';";
-            String studio = "";
-            String genre = "";
-            String link = "";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            MessageBox.Show(query);
-
-            connection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                studio = reader[0].ToString();
-                genre = reader[1].ToString();
-                link = reader[2].ToString();
-            }
-
-            title_label.Text = title;
-            studio_label.Text = studio;
-            genre_label.Text = genre;
-            link_label.Text = link;
-
-            reader.Close();
-            command.Dispose();
-            connection.Close();
+            Load_Game();
         }
 
         private void Delete_Click(object sender, EventArgs e)
@@ -122,7 +168,7 @@ namespace OnlineGameStore
             String title = listView1.SelectedItems[0].Text;
             String query = "Delete from Games where title = '" + title + "';";
 
-            MessageBox.Show(query);
+            //MessageBox.Show(query);
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -158,6 +204,21 @@ namespace OnlineGameStore
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Genre_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
         {
 
         }

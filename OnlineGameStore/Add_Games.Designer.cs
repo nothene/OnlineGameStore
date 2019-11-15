@@ -30,7 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Games));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -42,9 +43,9 @@
             this.add_genre = new System.Windows.Forms.TextBox();
             this.add_title = new System.Windows.Forms.TextBox();
             this.add_link = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.back = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -71,16 +72,26 @@
             this.panel4.Size = new System.Drawing.Size(800, 560);
             this.panel4.TabIndex = 86;
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add Games";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.AliceBlue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(17, 274);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 24);
+            this.label2.TabIndex = 86;
+            this.label2.Text = "About:";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.richTextBox1.Location = new System.Drawing.Point(21, 310);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(749, 179);
+            this.richTextBox1.TabIndex = 85;
+            this.richTextBox1.Text = "";
             // 
             // button3
             // 
@@ -122,6 +133,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 77;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
             // label9
             // 
@@ -203,6 +215,17 @@
             this.add_link.Size = new System.Drawing.Size(286, 26);
             this.add_link.TabIndex = 81;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Add Games";
+            // 
             // back
             // 
             this.back.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -218,26 +241,9 @@
             this.back.Text = "x";
             this.back.UseVisualStyleBackColor = false;
             // 
-            // richTextBox1
+            // openFileDialog1
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.richTextBox1.Location = new System.Drawing.Point(21, 310);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(749, 179);
-            this.richTextBox1.TabIndex = 85;
-            this.richTextBox1.Text = "";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.AliceBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 274);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 24);
-            this.label2.TabIndex = 86;
-            this.label2.Text = "About:";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Add_Games
             // 
@@ -277,5 +283,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

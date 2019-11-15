@@ -51,5 +51,21 @@ namespace OnlineGameStore
                 MessageBox.Show("One or more of the input field is invalid");
             }
         }
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = openFileDialog1.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                String file = openFileDialog1.FileName;
+                try
+                {
+                    pictureBox3.Image = System.Drawing.Image.FromFile(file);
+                } catch
+                {
+
+                }
+            }
+        }
     }
 }

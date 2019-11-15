@@ -97,9 +97,10 @@
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(8, 56);
+            this.listView1.Location = new System.Drawing.Point(8, 46);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(236, 615);
+            this.listView1.Size = new System.Drawing.Size(236, 620);
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -156,7 +157,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(232, 177);
+            this.label3.Location = new System.Drawing.Point(478, 90);
+            this.label3.MaximumSize = new System.Drawing.Size(620, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 24);
             this.label3.TabIndex = 10;
@@ -167,7 +169,7 @@
             // 
             this.date_joined.AutoSize = true;
             this.date_joined.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_joined.Location = new System.Drawing.Point(378, 122);
+            this.date_joined.Location = new System.Drawing.Point(376, 132);
             this.date_joined.Name = "date_joined";
             this.date_joined.Size = new System.Drawing.Size(60, 24);
             this.date_joined.TabIndex = 9;
@@ -177,11 +179,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(234, 122);
+            this.label1.Location = new System.Drawing.Point(244, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 24);
+            this.label1.Size = new System.Drawing.Size(120, 24);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Date Joined   :";
+            this.label1.Text = "Date Joined :";
             // 
             // hours_played
             // 
@@ -203,6 +205,7 @@
             this.listView3.Location = new System.Drawing.Point(788, 228);
             this.listView3.Name = "listView3";
             this.listView3.Size = new System.Drawing.Size(211, 427);
+            this.listView3.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView3.TabIndex = 6;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -227,6 +230,7 @@
             this.listView2.Location = new System.Drawing.Point(29, 228);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(753, 427);
+            this.listView2.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView2.TabIndex = 5;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -308,10 +312,10 @@
             this.label4.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(8, 41);
+            this.label4.Location = new System.Drawing.Point(8, 42);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(236, 45);
+            this.label4.Size = new System.Drawing.Size(236, 34);
             this.label4.TabIndex = 14;
             this.label4.Text = "Username";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
