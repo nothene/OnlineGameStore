@@ -95,22 +95,20 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.listView1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(8, 58);
+            this.listView1.Location = new System.Drawing.Point(8, 56);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(217, 606);
+            this.listView1.Size = new System.Drawing.Size(236, 615);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             this.listView1.Click += new System.EventHandler(this.ListView1_DoubleClick);
-            this.listView1.Enter += new System.EventHandler(this.listView1_Enter);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Usernamesafsdf";
-            this.columnHeader1.Width = 212;
+            this.columnHeader1.Width = 234;
             // 
             // textBox1
             // 
@@ -148,9 +146,9 @@
             this.panel1.Controls.Add(this.display_name);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel1.Location = new System.Drawing.Point(235, 40);
+            this.panel1.Location = new System.Drawing.Point(250, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1045, 681);
+            this.panel1.Size = new System.Drawing.Size(1030, 681);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -169,7 +167,7 @@
             // 
             this.date_joined.AutoSize = true;
             this.date_joined.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_joined.Location = new System.Drawing.Point(379, 122);
+            this.date_joined.Location = new System.Drawing.Point(378, 122);
             this.date_joined.Name = "date_joined";
             this.date_joined.Size = new System.Drawing.Size(60, 24);
             this.date_joined.TabIndex = 9;
@@ -199,11 +197,12 @@
             // 
             this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5});
-            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView3.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(813, 237);
+            this.listView3.Location = new System.Drawing.Point(788, 228);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(216, 427);
+            this.listView3.Size = new System.Drawing.Size(211, 427);
             this.listView3.TabIndex = 6;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -222,16 +221,15 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader6});
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(15, 237);
+            this.listView2.Location = new System.Drawing.Point(29, 228);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(783, 427);
+            this.listView2.Size = new System.Drawing.Size(753, 427);
             this.listView2.TabIndex = 5;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.ListView2_SelectedIndexChanged);
             // 
             // columnHeader2
             // 
@@ -277,7 +275,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(174, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -287,16 +285,18 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(7, 9);
+            this.textBox2.Location = new System.Drawing.Point(7, 7);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 29);
+            this.textBox2.Size = new System.Drawing.Size(198, 29);
             this.textBox2.TabIndex = 10;
             this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.textBox2.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.pictureBox2.Location = new System.Drawing.Point(192, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(211, 7);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 29);
             this.pictureBox2.TabIndex = 12;
@@ -306,26 +306,26 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(8, 43);
+            this.label4.Location = new System.Drawing.Point(8, 41);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(217, 45);
+            this.label4.Size = new System.Drawing.Size(236, 45);
             this.label4.TabIndex = 14;
             this.label4.Text = "Username";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Orange;
+            this.panel2.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.listView1);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(235, 681);
+            this.panel2.Size = new System.Drawing.Size(250, 681);
             this.panel2.TabIndex = 15;
             // 
             // Account

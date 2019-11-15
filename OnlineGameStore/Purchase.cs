@@ -20,7 +20,7 @@ namespace OnlineGameStore
             {
                 SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
-                String query = "select Account.username, Games.title, Purchase.purchase_date, Games.price from((Purchase inner join Games on Purchase.game_id = Games.game_id) inner join Account on Account.user_id = Purchase.user_id)";
+                String query = "select Account.username, Games.title, Purchase.purchase_date from((Purchase inner join Games on Purchase.game_id = Games.game_id) inner join Account on Account.user_id = Purchase.user_id)";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
@@ -33,7 +33,6 @@ namespace OnlineGameStore
                     int index = listView1.Items.Count - 1;
                     listView1.Items[index].SubItems.Add(reader[1].ToString());
                     listView1.Items[index].SubItems.Add(reader[2].ToString());
-                    listView1.Items[index].SubItems.Add(reader[3].ToString());
                 }
 
                 connection.Close();

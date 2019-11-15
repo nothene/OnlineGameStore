@@ -52,9 +52,11 @@ namespace OnlineGameStore
                     bio = reader[7].ToString();
                 }
 
+                DateTime dt = DateTime.Parse(date);
+                date_joined.Text = dt.ToString("MM/dd/yyyy");
+
                 display_name.Text = uname;
                 hours_played.Text = hours;
-                date_joined.Text = date;
                 label3.Text = bio;
 
                 reader.Close();
@@ -241,9 +243,11 @@ namespace OnlineGameStore
                     bio = reader[7].ToString();
                 }
 
+                DateTime dt = DateTime.Parse(date);
+
                 display_name.Text = uname;
                 hours_played.Text = hours;
-                date_joined.Text = date;
+                date_joined.Text = dt.ToString("MM/dd/yyyy");
                 label3.Text = bio;
 
                 reader.Close();
@@ -251,7 +255,7 @@ namespace OnlineGameStore
 
                 listView2.Items.Clear();
 
-                query = "Select Games.title, Library.hours_played, Games.genre, Games.link from((Library Inner Join Games on Library.game_id = Games.game_id) " +
+                query = "Select distinct Games.title, Library.hours_played, Games.genre, Games.link from((Library Inner Join Games on Library.game_id = Games.game_id) " +
                         "Inner Join Account on Library.user_id = Account.user_id) where username = '" + name + "';";
                 command = new SqlCommand(query, connection);
 
@@ -271,7 +275,7 @@ namespace OnlineGameStore
 
                 listView3.Items.Clear();
 
-                query = "Select Friend.user2_id from(Account Inner Join Friend on Account.user_id = Friend.user1_id) where user_id = " + uid + ";";
+                query = "Select distinct Friend.user2_id from(Account Inner Join Friend on Account.user_id = Friend.user1_id) where user_id = " + uid + ";";
                 command = new SqlCommand(query, connection);
 
                 reader = command.ExecuteReader();
@@ -316,32 +320,12 @@ namespace OnlineGameStore
 
         }
 
-        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ListView3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ListView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Label2_Click(object sender, EventArgs e)
         {
 
         }
 
         private void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -357,6 +341,32 @@ namespace OnlineGameStore
         }
 
         private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            if(textBox2.TextLength > 0)
+            {
+                int cnt = listView1.Items.Count;
+                bool found = false;
+                for(int i = 0; i < cnt; i++)
+                {
+                    if (listView1.Items[i].Text == textBox2.Text) {
+                        found = true;
+                        listView1.Select();
+                        listView1.Items[i].Selected = true;
+                        listView1.EnsureVisible(i);
+                        Load_Profile();
+                        break;
+                    }
+                }
+                
+
+                if(!found)
+                {
+                    MessageBox.Show("Not found", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void ListView3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

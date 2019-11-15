@@ -32,7 +32,8 @@ namespace OnlineGameStore
             this.login.FlatAppearance.BorderSize = 0;
             this.cancel.FlatAppearance.BorderSize = 0;
             Account acc = new Account();
-            acc.Show();
+            Games games = new Games();
+            games.Show();
         }
 
         protected override void OnLoad(EventArgs e)

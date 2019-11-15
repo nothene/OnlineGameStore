@@ -42,16 +42,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // back
@@ -84,6 +89,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.richTextBox1);
             this.panel2.Controls.Add(this.link_label);
             this.panel2.Controls.Add(this.genre_label);
             this.panel2.Controls.Add(this.studio_label);
@@ -93,16 +100,17 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(308, 40);
+            this.panel2.Location = new System.Drawing.Point(250, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(972, 680);
+            this.panel2.Size = new System.Drawing.Size(1030, 680);
             this.panel2.TabIndex = 57;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // link_label
             // 
             this.link_label.AutoSize = true;
             this.link_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_label.Location = new System.Drawing.Point(284, 161);
+            this.link_label.Location = new System.Drawing.Point(768, 170);
             this.link_label.Name = "link_label";
             this.link_label.Size = new System.Drawing.Size(94, 24);
             this.link_label.TabIndex = 66;
@@ -113,7 +121,7 @@
             // 
             this.genre_label.AutoSize = true;
             this.genre_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genre_label.Location = new System.Drawing.Point(284, 111);
+            this.genre_label.Location = new System.Drawing.Point(768, 135);
             this.genre_label.Name = "genre_label";
             this.genre_label.Size = new System.Drawing.Size(70, 24);
             this.genre_label.TabIndex = 64;
@@ -123,7 +131,7 @@
             // 
             this.studio_label.AutoSize = true;
             this.studio_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studio_label.Location = new System.Drawing.Point(284, 63);
+            this.studio_label.Location = new System.Drawing.Point(768, 96);
             this.studio_label.Name = "studio_label";
             this.studio_label.Size = new System.Drawing.Size(60, 24);
             this.studio_label.TabIndex = 63;
@@ -134,7 +142,7 @@
             this.title_label.AutoSize = true;
             this.title_label.BackColor = System.Drawing.Color.AliceBlue;
             this.title_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title_label.Location = new System.Drawing.Point(209, 13);
+            this.title_label.Location = new System.Drawing.Point(692, 29);
             this.title_label.Name = "title_label";
             this.title_label.Size = new System.Drawing.Size(241, 33);
             this.title_label.TabIndex = 62;
@@ -144,9 +152,9 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 29);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 172);
+            this.pictureBox1.Size = new System.Drawing.Size(640, 360);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
@@ -156,7 +164,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.AliceBlue;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(229, 161);
+            this.label5.Location = new System.Drawing.Point(713, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 24);
             this.label5.TabIndex = 51;
@@ -167,7 +175,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.AliceBlue;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(210, 111);
+            this.label6.Location = new System.Drawing.Point(694, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 24);
             this.label6.TabIndex = 52;
@@ -178,7 +186,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.AliceBlue;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(210, 63);
+            this.label7.Location = new System.Drawing.Point(694, 96);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 24);
             this.label7.TabIndex = 53;
@@ -195,25 +203,16 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.label4.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(15, 49);
+            this.label4.Location = new System.Drawing.Point(8, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(270, 47);
+            this.label4.Size = new System.Drawing.Size(236, 47);
             this.label4.TabIndex = 49;
             this.label4.Text = "Title";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(15, 14);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(231, 29);
-            this.textBox2.TabIndex = 47;
             // 
             // button1
             // 
@@ -222,9 +221,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(15, 640);
+            this.button1.Location = new System.Drawing.Point(9, 632);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 30);
+            this.button1.Size = new System.Drawing.Size(115, 42);
             this.button1.TabIndex = 55;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = false;
@@ -237,9 +236,9 @@
             this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.ForeColor = System.Drawing.Color.White;
-            this.delete.Location = new System.Drawing.Point(153, 640);
+            this.delete.Location = new System.Drawing.Point(128, 632);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(132, 30);
+            this.delete.Size = new System.Drawing.Size(115, 42);
             this.delete.TabIndex = 56;
             this.delete.Text = "-";
             this.delete.UseVisualStyleBackColor = false;
@@ -252,14 +251,13 @@
             this.columnHeader1});
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(15, 68);
+            this.listView1.Location = new System.Drawing.Point(8, 61);
             this.listView1.Margin = new System.Windows.Forms.Padding(0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(270, 566);
+            this.listView1.Size = new System.Drawing.Size(236, 566);
             this.listView1.TabIndex = 46;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             this.listView1.Click += new System.EventHandler(this.ListView1_Click);
             // 
             // columnHeader1
@@ -269,17 +267,61 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.delete);
             this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 680);
+            this.panel1.Size = new System.Drawing.Size(250, 680);
             this.panel1.TabIndex = 58;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(6, 8);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(199, 29);
+            this.textBox1.TabIndex = 57;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.pictureBox4.Location = new System.Drawing.Point(211, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox4.TabIndex = 58;
+            this.pictureBox4.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.AliceBlue;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.richTextBox1.Location = new System.Drawing.Point(29, 435);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(973, 214);
+            this.richTextBox1.TabIndex = 86;
+            this.richTextBox1.Text = "";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(25, 401);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(157, 24);
+            this.label8.TabIndex = 87;
+            this.label8.Text = "About This Game";
             // 
             // Games
             // 
@@ -294,14 +336,19 @@
             this.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Games";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Games";
             this.Load += new System.EventHandler(this.Games_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel4_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel4_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel4_MouseUp);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,10 +369,14 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label studio_label;
         private System.Windows.Forms.Label genre_label;
         private System.Windows.Forms.LinkLabel link_label;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label8;
     }
 }

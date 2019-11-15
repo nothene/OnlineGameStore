@@ -15,19 +15,20 @@ namespace OnlineGameStore
     {
         bool mouseDown;
         private Point last;
+
         public Games()
         {
             InitializeComponent();
             listView1.FullRowSelect = true;
         }
 
-        private void Account_MouseDown(object sender, MouseEventArgs e)
+        private void Panel4_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
             last = e.Location;
         }
 
-        private void Account_MouseMove(object sender, MouseEventArgs e)
+        private void Panel4_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
             {
@@ -37,7 +38,7 @@ namespace OnlineGameStore
             }
         }
 
-        private void Account_MouseUp(object sender, MouseEventArgs e)
+        private void Panel4_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
         }
@@ -114,11 +115,6 @@ namespace OnlineGameStore
             connection.Close();
         }
 
-        private void Label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Delete_Click(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
@@ -143,19 +139,27 @@ namespace OnlineGameStore
             Load_Data();
         }
 
-        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Button1_Click(object sender, EventArgs e)
         {
+            Add_Games add_Games = new Add_Games(this);
+            add_Games.Show();
+        }
+
+  
+
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
 
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void Panel2_Paint(object sender, PaintEventArgs e)
         {
-            panel2.Hide();
+
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
