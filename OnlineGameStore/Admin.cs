@@ -12,6 +12,8 @@ namespace OnlineGameStore
 {
     public partial class Admin : Form
     {
+        private bool mouseDown;
+        private Point last;
         public Admin()
         {
             InitializeComponent();
@@ -30,7 +32,8 @@ namespace OnlineGameStore
             this.login.FlatAppearance.BorderSize = 0;
             this.cancel.FlatAppearance.BorderSize = 0;
             Account acc = new Account();
-            acc.Show();
+            Games games = new Games();
+            games.Show();
         }
 
         protected override void OnLoad(EventArgs e)
@@ -122,6 +125,27 @@ namespace OnlineGameStore
         private void cancel_MouseHover(object sender, EventArgs e)
         {
             cancel.FlatAppearance.BorderColor = Color.White;
+        }
+
+        private void Admin_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            last = e.Location;
+        }
+
+        private void Admin_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - last.X) + e.X, (this.Location.Y - last.Y) + e.Y);
+                this.Update();
+            }
+        }
+
+        private void Admin_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }

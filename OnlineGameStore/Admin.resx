@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="login.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="login.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -126,7 +130,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 191</value>
+    <value>29, 224</value>
   </data>
   <data name="login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -135,11 +139,10 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 38</value>
+    <value>217, 38</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="login.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="login.Text" xml:space="preserve">
     <value>LOGIN</value>
@@ -229,13 +232,13 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>187, 191</value>
+    <value>249, 224</value>
   </data>
   <data name="cancel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
   <data name="cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 38</value>
+    <value>217, 38</value>
   </data>
   <data name="cancel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -259,13 +262,13 @@
     <value>3</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 79</value>
+    <value>124, 77</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 20</value>
+    <value>342, 20</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>0</value>
   </data>
   <data name="textBox1.Text" xml:space="preserve">
     <value>admin</value>
@@ -286,10 +289,10 @@
     <value>124, 115</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 20</value>
+    <value>342, 20</value>
   </data>
   <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>1</value>
   </data>
   <data name="textBox2.Text" xml:space="preserve">
     <value>admin</value>
@@ -310,19 +313,19 @@
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 27</value>
+    <value>12, 9</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 24</value>
+    <value>68, 20</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Nothene's Admin Page</value>
+    <value>Account</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -346,7 +349,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>377, 259</value>
+    <value>498, 292</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
