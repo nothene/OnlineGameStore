@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OnlineGameStore
 {
-    public partial class User : Form
+    public partial class User_Profile : Form
     {
-        public User()
+        public User_Profile()
         {
             InitializeComponent();
         }
