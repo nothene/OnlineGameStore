@@ -43,11 +43,10 @@ namespace OnlineGameStore
             mouseDown = false;
         }
 
-        private void Load_Data()
+        public void Load_Data()
         {
             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
-            //String query = @"Select username, password, balance, display_name, creation_date, total_hours From Account";
             String query = @"Select title from Games";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -55,6 +54,7 @@ namespace OnlineGameStore
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
 
+            listView1.Items.Clear();
             while (reader.Read())
             {
                 listView1.Items.Add(reader[0].ToString());
@@ -79,7 +79,6 @@ namespace OnlineGameStore
             String about = "";
 
             SqlCommand command = new SqlCommand(query, connection);
-            //MessageBox.Show(query);
 
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
@@ -98,7 +97,14 @@ namespace OnlineGameStore
             studio_label.Text = studio;
             genre_label.Text = genre;
             link_label.Text = link;
-            pictureBox1.Image = System.Drawing.Bitmap.FromFile(path);
+            if(path == "")
+            {
+                pictureBox1.Image = System.Drawing.Bitmap.FromFile("D:/Game_Pictures/replace.jpg");
+            }
+            else
+            {
+                pictureBox1.Image = System.Drawing.Bitmap.FromFile(path);
+            }
             richTextBox1.Text = about;
 
             reader.Close();

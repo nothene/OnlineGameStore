@@ -33,3 +33,4 @@ C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGame
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.pdb
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.csprojAssemblyReference.cache
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Add_Games.resources
+C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.Report.resources

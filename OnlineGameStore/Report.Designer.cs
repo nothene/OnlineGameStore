@@ -28,12 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.CrystalReport11 = new OnlineGameStore.CrystalReport1();
+            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.CrystalReport12 = new OnlineGameStore.CrystalReport1();
+            this.SuspendLayout();
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.CrystalReport11;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1264, 681);
+            this.crystalReportViewer1.TabIndex = 0;
+            // 
+            // crystalReportViewer2
+            // 
+            this.crystalReportViewer2.ActiveViewIndex = 0;
+            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer2.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer2.Name = "crystalReportViewer2";
+            this.crystalReportViewer2.ReportSource = this.CrystalReport12;
+            this.crystalReportViewer2.Size = new System.Drawing.Size(1264, 681);
+            this.crystalReportViewer2.TabIndex = 1;
+            // 
+            // Report
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.crystalReportViewer2);
+            this.Controls.Add(this.crystalReportViewer1);
+            this.Name = "Report";
             this.Text = "Report";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalReport1 CrystalReport11;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
+        private CrystalReport1 CrystalReport12;
     }
 }

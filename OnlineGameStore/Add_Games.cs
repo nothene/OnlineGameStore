@@ -13,9 +13,11 @@ namespace OnlineGameStore
 {
     public partial class Add_Games : Form
     {
-        public Add_Games(Form callingForm)
+        public Games _games;
+        public Add_Games(Games games)
         {
             InitializeComponent();
+            _games = games;
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -29,8 +31,8 @@ namespace OnlineGameStore
             {
                 SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
-                String query = "Insert into Games (title, studio, genre, link) values ('" + add_title.Text + "', '"
-                                + add_studio.Text + "', '" + add_genre.Text + "', '" + add_link.Text + "');";
+                String query = "Insert into Games (title, studio, genre, link, about) values ('" + add_title.Text + "', '"
+                                + add_studio.Text + "', '" + add_genre.Text + "', '" + add_link.Text + "', '" + richTextBox1.Text +"');";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
@@ -44,6 +46,7 @@ namespace OnlineGameStore
                 reader.Close();
                 command.Dispose();
                 connection.Close();
+                _games.Load_Data();
                 this.Close();
             }
             else

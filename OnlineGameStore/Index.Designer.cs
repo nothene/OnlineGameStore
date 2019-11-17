@@ -40,12 +40,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -212,6 +212,17 @@
             this.label1.Text = "Created by Nothene // Supported by Patch";
             this.label1.Click += new System.EventHandler(this.Label1_Click_1);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label10.Location = new System.Drawing.Point(961, 632);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(30, 24);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "    ";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumPurple;
@@ -270,17 +281,6 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Placeholder";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label10.Location = new System.Drawing.Point(961, 632);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 24);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "    ";
-            // 
             // timer1
             // 
             this.timer1.Interval = 300;
@@ -300,6 +300,7 @@
             this.back.TabIndex = 20;
             this.back.Text = "x";
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Index
             // 

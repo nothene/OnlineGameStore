@@ -122,5 +122,10 @@ namespace OnlineGameStore
         {
 
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
