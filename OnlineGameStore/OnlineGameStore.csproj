@@ -103,11 +103,17 @@
     <Compile Include="Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
+    <Compile Include="User_Games.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User.Designer.cs">
-      <DependentUpon>User.cs</DependentUpon>
+    <Compile Include="User_Games.Designer.cs">
+      <DependentUpon>User_Games.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Profile.Designer.cs">
+      <DependentUpon>User_Profile.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
@@ -142,6 +148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Games.resx">
+      <DependentUpon>User_Games.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Profile.resx">
+      <DependentUpon>User_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
