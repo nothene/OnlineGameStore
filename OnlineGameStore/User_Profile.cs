@@ -14,10 +14,33 @@ namespace OnlineGameStore
     public partial class User_Profile : Form
     {
         String name = "";
+        private Point last;
+        bool mouseDown;
         public User_Profile(String _name)
         {
             InitializeComponent();
             name = _name;
+        }
+
+        private void Account_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            last = e.Location;
+        }
+
+        private void Account_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - last.X) + e.X, (this.Location.Y - last.Y) + e.Y);
+                this.Update();
+            }
+        }
+
+        private void Account_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
 
         private void User_Profile_Load(object sender, EventArgs e)

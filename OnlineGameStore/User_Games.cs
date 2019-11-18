@@ -14,6 +14,8 @@ namespace OnlineGameStore
     public partial class User_Games : Form
     {
         String name = "";
+        private Point last;
+        bool mouseDown;
         public User_Games(String _name)
         {
             InitializeComponent();
@@ -145,6 +147,27 @@ namespace OnlineGameStore
         private void Back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Account_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            last = e.Location;
+        }
+
+        private void Account_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - last.X) + e.X, (this.Location.Y - last.Y) + e.Y);
+                this.Update();
+            }
+        }
+
+        private void Account_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }

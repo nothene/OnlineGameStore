@@ -14,6 +14,8 @@ namespace OnlineGameStore
     public partial class Add_Games : Form
     {
         public Games _games;
+        bool mouseDown;
+        private Point last;
         public Add_Games(Games games)
         {
             InitializeComponent();
@@ -69,6 +71,32 @@ namespace OnlineGameStore
 
                 }
             }
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Account_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            last = e.Location;
+        }
+
+        private void Account_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - last.X) + e.X, (this.Location.Y - last.Y) + e.Y);
+                this.Update();
+            }
+        }
+
+        private void Account_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }
