@@ -43,6 +43,8 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.delete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.link_label = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label8 = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -75,6 +75,7 @@
             this.button1.TabIndex = 97;
             this.button1.Text = "Profile";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label2
             // 
@@ -115,6 +116,7 @@
             this.back.TabIndex = 95;
             this.back.Text = "x";
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.Back_Click);
             // 
             // panel1
             // 
@@ -231,7 +233,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.link_label);
             this.panel2.Controls.Add(this.listView2);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.richTextBox1);
@@ -247,6 +249,33 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1030, 640);
             this.panel2.TabIndex = 99;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label1.Location = new System.Drawing.Point(731, 431);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(275, 34);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Friends Who Play";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // link_label
+            // 
+            this.link_label.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.link_label.FlatAppearance.BorderSize = 0;
+            this.link_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.link_label.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.link_label.Location = new System.Drawing.Point(661, 280);
+            this.link_label.Name = "link_label";
+            this.link_label.Size = new System.Drawing.Size(272, 100);
+            this.link_label.TabIndex = 89;
+            this.link_label.Text = "PLAY";
+            this.link_label.UseVisualStyleBackColor = false;
             // 
             // listView2
             // 
@@ -360,33 +389,6 @@
             this.label7.TabIndex = 53;
             this.label7.Text = "Studio:";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.button4.Location = new System.Drawing.Point(661, 280);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(272, 100);
-            this.button4.TabIndex = 89;
-            this.button4.Text = "PLAY";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label1.Location = new System.Drawing.Point(731, 431);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(275, 34);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Friends Who Play";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // User_Games
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,6 +404,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "User_Games";
             this.Text = "User_Games";
+            this.Load += new System.EventHandler(this.User_Games_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -441,6 +444,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button link_label;
     }
 }

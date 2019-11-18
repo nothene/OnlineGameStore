@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace OnlineGameStore
 {
@@ -202,7 +196,7 @@ namespace OnlineGameStore
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if(textBox1.Text.Length == 0)
+            if (textBox1.Text.Length == 0)
             {
                 textBox1.Text = "Search...";
             }
@@ -313,7 +307,7 @@ namespace OnlineGameStore
 
             }
         }
- 
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -342,13 +336,14 @@ namespace OnlineGameStore
 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-            if(textBox2.TextLength > 0)
+            if (textBox2.TextLength > 0)
             {
                 int cnt = listView1.Items.Count;
                 bool found = false;
-                for(int i = 0; i < cnt; i++)
+                for (int i = 0; i < cnt; i++)
                 {
-                    if (listView1.Items[i].Text == textBox2.Text) {
+                    if (listView1.Items[i].Text == textBox2.Text)
+                    {
                         found = true;
                         listView1.Select();
                         listView1.Items[i].Selected = true;
@@ -357,9 +352,9 @@ namespace OnlineGameStore
                         break;
                     }
                 }
-                
 
-                if(!found)
+
+                if (!found)
                 {
                     MessageBox.Show("Not found", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

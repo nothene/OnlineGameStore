@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace OnlineGameStore
 {
     public partial class Admin : Form
     {
+        public static User_Profile user_Profile;
+        public static User_Games user_Games;
         private bool mouseDown;
         private Point last;
         public Admin()
@@ -31,9 +34,6 @@ namespace OnlineGameStore
             this.login.Enabled = false;
             this.login.FlatAppearance.BorderSize = 0;
             this.cancel.FlatAppearance.BorderSize = 0;
-            Account acc = new Account();
-            Games games = new Games();
-            games.Show();
         }
 
         protected override void OnLoad(EventArgs e)
@@ -99,11 +99,37 @@ namespace OnlineGameStore
             if(textBox1.Text == "admin" && textBox2.Text == "admin")
             {
                 //this.Close();
-                Form index = new Index();
+                Index index = new Index();
                 index.Show();
             } else
             {
-                MessageBox.Show("Username or Password is invalid!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
+
+                String query = @"Select count(*) from Games";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                reader.Read();
+
+                int cnt = Convert.ToInt32(reader[0].ToString());
+
+                if(cnt > 0)
+                {
+                    user_Games = new User_Games(textBox1.Text);
+                    user_Profile = new User_Profile(textBox1.Text);
+                    user_Games.Show();
+                    this.Hide();
+                } else
+                {
+                    MessageBox.Show("Username or Password is invalid!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+                reader.Close();
+                command.Dispose();
+                connection.Close();
             }
         }
 
