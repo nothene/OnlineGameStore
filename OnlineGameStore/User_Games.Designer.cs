@@ -37,12 +37,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.delete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.link_label = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label8 = new System.Windows.Forms.Label();
@@ -53,8 +53,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,19 +66,20 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 40);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(640, 40);
             this.button1.TabIndex = 97;
             this.button1.Text = "Profile";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 24);
@@ -89,7 +88,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,6 +114,7 @@
             this.back.TabIndex = 95;
             this.back.Text = "x";
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.Back_Click);
             // 
             // panel1
             // 
@@ -122,7 +122,6 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.delete);
@@ -133,7 +132,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
@@ -160,27 +159,13 @@
             this.pictureBox2.TabIndex = 48;
             this.pictureBox2.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label4.Location = new System.Drawing.Point(8, 42);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(236, 34);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Title";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(6, 594);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 40);
@@ -190,8 +175,8 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,7 +203,7 @@
             this.delete.FlatAppearance.BorderSize = 0;
             this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.delete.ForeColor = System.Drawing.Color.White;
             this.delete.Location = new System.Drawing.Point(127, 594);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(115, 40);
@@ -230,8 +215,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.link_label);
             this.panel2.Controls.Add(this.listView2);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.richTextBox1);
@@ -248,10 +232,23 @@
             this.panel2.Size = new System.Drawing.Size(1030, 640);
             this.panel2.TabIndex = 99;
             // 
+            // link_label
+            // 
+            this.link_label.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.link_label.FlatAppearance.BorderSize = 0;
+            this.link_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.link_label.ForeColor = System.Drawing.Color.White;
+            this.link_label.Location = new System.Drawing.Point(661, 280);
+            this.link_label.Name = "link_label";
+            this.link_label.Size = new System.Drawing.Size(272, 100);
+            this.link_label.TabIndex = 89;
+            this.link_label.Text = "PLAY";
+            this.link_label.UseVisualStyleBackColor = false;
+            this.link_label.Click += new System.EventHandler(this.link_label_Click);
+            // 
             // listView2
             // 
-            this.listView2.BackColor = System.Drawing.Color.NavajoWhite;
-            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2});
             this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,7 +280,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.AliceBlue;
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -360,33 +357,6 @@
             this.label7.TabIndex = 53;
             this.label7.Text = "Studio:";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.button4.Location = new System.Drawing.Point(661, 280);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(272, 100);
-            this.button4.TabIndex = 89;
-            this.button4.Text = "PLAY";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label1.Location = new System.Drawing.Point(731, 431);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(275, 34);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Friends Who Play";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // User_Games
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,7 +371,12 @@
             this.Controls.Add(this.back);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "User_Games";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User_Games";
+            this.Load += new System.EventHandler(this.User_Games_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Account_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Account_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Account_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -424,7 +399,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -440,7 +414,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button link_label;
     }
 }

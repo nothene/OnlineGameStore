@@ -16,10 +16,7 @@ namespace OnlineGameStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Admin());
-            //Application.Run(new Report());
-            Application.Run(new User_Games());
-            Application.Run(new User_Profile());
+            Application.Run(new Admin());
         }
     }
 }

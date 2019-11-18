@@ -47,10 +47,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,10 +69,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.date_joined);
             this.panel1.Controls.Add(this.label1);
@@ -91,12 +83,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 642);
             this.panel1.TabIndex = 91;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(469, 141);
+            this.label3.Location = new System.Drawing.Point(232, 178);
             this.label3.MaximumSize = new System.Drawing.Size(620, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -107,7 +100,7 @@
             // 
             this.date_joined.AutoSize = true;
             this.date_joined.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_joined.Location = new System.Drawing.Point(376, 141);
+            this.date_joined.Location = new System.Drawing.Point(376, 130);
             this.date_joined.Name = "date_joined";
             this.date_joined.Size = new System.Drawing.Size(60, 24);
             this.date_joined.TabIndex = 9;
@@ -117,7 +110,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 141);
+            this.label1.Location = new System.Drawing.Point(244, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 24);
             this.label1.TabIndex = 8;
@@ -127,7 +120,7 @@
             // 
             this.hours_played.AutoSize = true;
             this.hours_played.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hours_played.Location = new System.Drawing.Point(377, 99);
+            this.hours_played.Location = new System.Drawing.Point(377, 88);
             this.hours_played.Name = "hours_played";
             this.hours_played.Size = new System.Drawing.Size(60, 24);
             this.hours_played.TabIndex = 7;
@@ -135,7 +128,7 @@
             // 
             // listView3
             // 
-            this.listView3.BackColor = System.Drawing.Color.NavajoWhite;
+            this.listView3.BackColor = System.Drawing.Color.White;
             this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5});
             this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,7 +150,7 @@
             // 
             // listView2
             // 
-            this.listView2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.listView2.BackColor = System.Drawing.Color.White;
             this.listView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
@@ -194,7 +187,7 @@
             // 
             this.unused_1.AutoSize = true;
             this.unused_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unused_1.Location = new System.Drawing.Point(232, 99);
+            this.unused_1.Location = new System.Drawing.Point(232, 88);
             this.unused_1.Name = "unused_1";
             this.unused_1.Size = new System.Drawing.Size(132, 24);
             this.unused_1.TabIndex = 2;
@@ -223,7 +216,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,80 +234,25 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(640, 40);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(640, 40);
             this.button2.TabIndex = 93;
             this.button2.Text = "Games";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 24);
             this.label2.TabIndex = 89;
             this.label2.Text = "User";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label4.Location = new System.Drawing.Point(30, 221);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(400, 34);
-            this.label4.TabIndex = 94;
-            this.label4.Text = "Title";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label5.Location = new System.Drawing.Point(430, 221);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label5.Size = new System.Drawing.Size(150, 34);
-            this.label5.TabIndex = 95;
-            this.label5.Text = "Hours Played";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label6.Location = new System.Drawing.Point(580, 221);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label6.Size = new System.Drawing.Size(450, 34);
-            this.label6.TabIndex = 96;
-            this.label6.Text = "Genre";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label7.Location = new System.Drawing.Point(1041, 221);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label7.Size = new System.Drawing.Size(210, 34);
-            this.label7.TabIndex = 97;
-            this.label7.Text = "Friends";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // User_Profile
             // 
@@ -330,6 +268,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "User_Profile";
             this.Text = "User";
+            this.Load += new System.EventHandler(this.User_Profile_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Account_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Account_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Account_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -357,9 +299,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
     }
 }
