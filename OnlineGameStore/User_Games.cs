@@ -16,6 +16,12 @@ namespace OnlineGameStore
         String name = "";
         private Point last;
         bool mouseDown;
+        String gid = "";
+        String studio = "";
+        String genre = "";
+        String link = "";
+        String path = "";
+        String about = "";
         public User_Games(String _name)
         {
             InitializeComponent();
@@ -72,12 +78,7 @@ namespace OnlineGameStore
 
             String title = listView1.SelectedItems[0].Text.ToString();
             String query = "Select game_id, studio, genre, link, image_path, about from Games where title = '" + title + "';";
-            String gid = "";
-            String studio = "";
-            String genre = "";
-            String link = "";
-            String path = "";
-            String about = "";
+
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -168,6 +169,13 @@ namespace OnlineGameStore
         private void Account_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void link_label_Click(object sender, EventArgs e)
+        {
+            WebBrowser browser = new WebBrowser(link);
+            browser.Show();
+            browser.Activate();
         }
     }
 }

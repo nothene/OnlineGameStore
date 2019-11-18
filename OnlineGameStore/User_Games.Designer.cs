@@ -244,6 +244,7 @@
             this.link_label.TabIndex = 89;
             this.link_label.Text = "PLAY";
             this.link_label.UseVisualStyleBackColor = false;
+            this.link_label.Click += new System.EventHandler(this.link_label_Click);
             // 
             // listView2
             // 
