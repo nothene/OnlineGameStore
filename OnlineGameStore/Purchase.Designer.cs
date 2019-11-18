@@ -94,6 +94,7 @@
             this.back.TabIndex = 8;
             this.back.Text = "x";
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.Back_Click);
             // 
             // panel1
             // 

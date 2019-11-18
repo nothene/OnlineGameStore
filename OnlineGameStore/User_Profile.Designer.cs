@@ -267,6 +267,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "User_Profile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Profile_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Account_MouseDown);

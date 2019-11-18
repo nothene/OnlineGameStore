@@ -26,6 +26,8 @@ namespace OnlineGameStore
         {
             InitializeComponent();
             _name = name;
+            listView1.FullRowSelect = true;
+            listView2.FullRowSelect = true;
         }
 
         public void Load_Data()
@@ -76,7 +78,9 @@ namespace OnlineGameStore
         {
             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
-            String title = listView1.SelectedItems[0].Text.ToString();
+            String @title = listView1.SelectedItems[0].Text.ToString();
+            title_label.Text = title;
+            title = title.Replace("'", "''");
             String query = "Select game_id, studio, genre, link, image_path, about from Games where title = '" + title + "';";
 
 
@@ -96,8 +100,7 @@ namespace OnlineGameStore
             }
 
             studio_label.Text = studio;
-            genre_label.Text = genre;
-            link_label.Text = link;
+            genre_label.Text = genre;   
             if (path == "")
             {
                 pictureBox1.Image = System.Drawing.Bitmap.FromFile("D:/Game_Pictures/replace.jpg");
@@ -173,9 +176,31 @@ namespace OnlineGameStore
 
         private void link_label_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
+
+            String @title = listView1.SelectedItems[0].Text.ToString();
+            title_label.Text = title;
+            title = title.Replace("'", "''");
+            String query = "Insert into Library (user_id, game_id)";
+
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+            }
+
             WebBrowser browser = new WebBrowser(link);
             browser.Show();
             browser.Activate();
+        }
+
+        private void ListView1_Click(object sender, EventArgs e)
+        {
+            Load_Game();
         }
     }
 }

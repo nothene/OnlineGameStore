@@ -98,7 +98,7 @@ namespace OnlineGameStore
 
                 for (int i = 0; i < idx; i++)
                 {
-                    query = "Select display_name from Account where user_id = " + arr[i].ToString() + ";";
+                    query = "Select distinct display_name from Account where user_id = " + arr[i].ToString() + ";";
                     command = new SqlCommand(query, connection);
                     reader = command.ExecuteReader();
                     reader.Read();
@@ -289,7 +289,7 @@ namespace OnlineGameStore
 
                 for (int i = 0; i < idx; i++)
                 {
-                    query = "Select display_name from Account where user_id = " + arr[i].ToString() + ";";
+                    query = "Select distinct display_name from Account where user_id = " + arr[i].ToString() + ";";
                     command = new SqlCommand(query, connection);
                     reader = command.ExecuteReader();
                     reader.Read();

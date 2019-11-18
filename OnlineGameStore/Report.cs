@@ -16,5 +16,11 @@ namespace OnlineGameStore
         {
             InitializeComponent();
         }
+
+        private void Report_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Index index = new Index();
+            index.Show();
+        }
     }
 }

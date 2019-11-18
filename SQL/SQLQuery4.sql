@@ -17,19 +17,19 @@
 
 --select * from Games
 
---insert into Library (user_id, game_id, hours_played) values
---	(1, 3, 13),
---	(2, 7, 34),
---	(1, 1, 324),
---	(2, 3, 432),
---	(4, 5, 45),
---	(8, 2, 33),
---	(3, 7, 66),
---	(9, 5, 33),
---	(4, 3, 98),
---	(3, 7, 21),
---	(2, 3, 94),
---	(6, 2, 32);
+insert into Library (user_id, game_id) values
+	(1, 1),
+	(2, 2),
+	(1, 3),
+	(2, 1),
+	(4, 2),
+	(8, 2),
+	(3, 1),
+	(9, 1),
+	(4, 3),
+	(3, 3),
+	(2, 3),
+	(6, 3);
 
 --select * from library
 
@@ -42,19 +42,19 @@
 --	purchase_date datetime
 --);
 
---insert into Purchase (user_id, game_id, purchase_date) values
---	(1, 3, convert(datetime, '11/23/2015')),
---	(2, 7, convert(datetime, '12/12/2010')),
---	(1, 1, convert(datetime, '11/22/2017')),
---	(2, 3, convert(datetime, '11/24/2017')),
---	(4, 5, convert(datetime, '1/5/2018')),
---	(8, 2, convert(datetime, '11/3/2014')),
---	(3, 7, convert(datetime, '12/23/2011')),
---	(9, 5, convert(datetime, '6/23/2018')),
---	(4, 3, convert(datetime, '1/23/2016')),
---	(3, 7, convert(datetime, '7/3/2013')),
---	(2, 3, convert(datetime, '10/3/2016')),
---	(6, 2, convert(datetime, '11/4/2012'));
+insert into Purchase (user_id, game_id, purchase_date) values
+	(1, 1, convert(datetime, '11/23/2015')),
+	(2, 2, convert(datetime, '12/12/2010')),
+	(1, 3, convert(datetime, '11/22/2017')),
+	(2, 1, convert(datetime, '11/24/2017')),
+	(4, 2, convert(datetime, '1/5/2018')),
+	(8, 2, convert(datetime, '11/3/2014')),
+	(3, 1, convert(datetime, '12/23/2011')),
+	(9, 1, convert(datetime, '6/23/2018')),
+	(4, 3, convert(datetime, '1/23/2016')),
+	(3, 3, convert(datetime, '7/3/2013')),
+	(2, 3, convert(datetime, '10/3/2016')),
+	(6, 3, convert(datetime, '11/4/2012'));
 
 --  exec sp_columns Purchase;
 

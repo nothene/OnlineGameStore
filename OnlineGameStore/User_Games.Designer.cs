@@ -37,10 +37,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.delete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.link_label = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
@@ -122,9 +120,7 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.listView1);
-            this.panel1.Controls.Add(this.delete);
             this.panel1.Location = new System.Drawing.Point(0, 80);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 640);
@@ -159,20 +155,6 @@
             this.pictureBox2.TabIndex = 48;
             this.pictureBox2.TabStop = false;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(6, 594);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 40);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.White;
@@ -186,31 +168,17 @@
             this.listView1.Margin = new System.Windows.Forms.Padding(0);
             this.listView1.Name = "listView1";
             this.listView1.Scrollable = false;
-            this.listView1.Size = new System.Drawing.Size(236, 543);
+            this.listView1.Size = new System.Drawing.Size(236, 584);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 46;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.Click += new System.EventHandler(this.ListView1_Click);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Title";
             this.columnHeader1.Width = 262;
-            // 
-            // delete
-            // 
-            this.delete.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.delete.FlatAppearance.BorderSize = 0;
-            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete.ForeColor = System.Drawing.Color.White;
-            this.delete.Location = new System.Drawing.Point(127, 594);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(115, 40);
-            this.delete.TabIndex = 56;
-            this.delete.Text = "-";
-            this.delete.UseVisualStyleBackColor = false;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // panel2
             // 
@@ -399,10 +367,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader columnHeader2;

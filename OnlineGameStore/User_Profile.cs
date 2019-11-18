@@ -88,7 +88,7 @@ namespace OnlineGameStore
 
                 listView2.Items.Clear();
 
-                query = "Select Games.title, Library.hours_played, Games.genre, Games.link from((Library Inner Join Games on Library.game_id = Games.game_id) " +
+                query = "Select distinct Games.title, Library.hours_played, Games.genre, Games.link from((Library Inner Join Games on Library.game_id = Games.game_id) " +
                         "Inner Join Account on Library.user_id = Account.user_id) where username = '" + name + "';";
                 command = new SqlCommand(query, connection);
 
@@ -128,7 +128,7 @@ namespace OnlineGameStore
 
                 for (int i = 0; i < idx; i++)
                 {
-                    query = "Select display_name from Account where user_id = " + arr[i].ToString() + ";";
+                    query = "Select distinct display_name from Account where user_id = " + arr[i].ToString() + ";";
                     command = new SqlCommand(query, connection);
                     reader = command.ExecuteReader();
                     reader.Read();

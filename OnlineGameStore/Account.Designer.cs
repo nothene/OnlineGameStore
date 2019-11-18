@@ -157,7 +157,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(469, 141);
+            this.label3.Location = new System.Drawing.Point(232, 177);
             this.label3.MaximumSize = new System.Drawing.Size(620, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -169,7 +169,7 @@
             // 
             this.date_joined.AutoSize = true;
             this.date_joined.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_joined.Location = new System.Drawing.Point(376, 141);
+            this.date_joined.Location = new System.Drawing.Point(376, 129);
             this.date_joined.Name = "date_joined";
             this.date_joined.Size = new System.Drawing.Size(60, 24);
             this.date_joined.TabIndex = 9;
@@ -179,7 +179,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 141);
+            this.label1.Location = new System.Drawing.Point(244, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 24);
             this.label1.TabIndex = 8;
@@ -189,7 +189,7 @@
             // 
             this.hours_played.AutoSize = true;
             this.hours_played.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hours_played.Location = new System.Drawing.Point(377, 99);
+            this.hours_played.Location = new System.Drawing.Point(377, 87);
             this.hours_played.Name = "hours_played";
             this.hours_played.Size = new System.Drawing.Size(60, 24);
             this.hours_played.TabIndex = 7;
@@ -263,7 +263,7 @@
             // 
             this.unused_1.AutoSize = true;
             this.unused_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unused_1.Location = new System.Drawing.Point(232, 99);
+            this.unused_1.Location = new System.Drawing.Point(232, 87);
             this.unused_1.Name = "unused_1";
             this.unused_1.Size = new System.Drawing.Size(132, 24);
             this.unused_1.TabIndex = 2;

@@ -70,13 +70,15 @@ namespace OnlineGameStore
             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
             String title = listView1.SelectedItems[0].Text.ToString();
+            title_label.Text = title;
+            title = title.Replace("'", "''");
             String query = "Select game_id, studio, genre, link, image_path, about from Games where title = '" + title + "';";
             String gid = "";
             String studio = "";
             String genre = "";
             String link = "";
             String path = "";
-            String about = "";
+            String @about = "";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -93,7 +95,6 @@ namespace OnlineGameStore
                 about = reader[5].ToString();
             }
 
-            title_label.Text = title;
             studio_label.Text = studio;
             genre_label.Text = genre;
             link_label.Text = link;

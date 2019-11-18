@@ -35,6 +35,7 @@
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.CrystalReport11 = new OnlineGameStore.CrystalReport1();
             this.crystalReportViewer4 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.CrystalReport14 = new OnlineGameStore.CrystalReport1();
             this.SuspendLayout();
             // 
             // crystalReportViewer3
@@ -75,12 +76,13 @@
             // 
             // crystalReportViewer4
             // 
-            this.crystalReportViewer4.ActiveViewIndex = -1;
+            this.crystalReportViewer4.ActiveViewIndex = 0;
             this.crystalReportViewer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer4.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer4.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer4.Name = "crystalReportViewer4";
+            this.crystalReportViewer4.ReportSource = this.CrystalReport14;
             this.crystalReportViewer4.Size = new System.Drawing.Size(1264, 681);
             this.crystalReportViewer4.TabIndex = 3;
             // 
@@ -95,6 +97,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "Report";
             this.Text = "Report";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Report_FormClosed);
             this.ResumeLayout(false);
 
         }
@@ -108,5 +111,6 @@
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer3;
         private CrystalReport1 CrystalReport13;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer4;
+        private CrystalReport1 CrystalReport14;
     }
 }

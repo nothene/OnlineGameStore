@@ -74,3 +74,4 @@ C:\Users\Thenone\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGa
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.User_Games.resources
 C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.User_Profile.resources
 C:\Users\Thenone\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.WebBrowser.resources
+C:\Users\KEVIN\source\repos\OnlineGameStore\OnlineGameStore\obj\Debug\OnlineGameStore.WebBrowser.resources

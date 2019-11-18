@@ -41,5 +41,12 @@ namespace OnlineGameStore
             }
             finally { }
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Index index = new Index();
+            index.Show();
+            this.Close();
+        }
     }
 }
