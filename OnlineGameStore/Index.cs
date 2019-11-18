@@ -75,9 +75,7 @@ namespace OnlineGameStore
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Report report = new Report();
-            report.Show();
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
