@@ -17,5 +17,15 @@
 
 --select * from Games;
 
-select * from library;
+--insert into Library (user_id, game_id) values 
+--	()
 
+--update Library set times_visited = 1;
+
+--select * from Library;
+
+--select user_id from Account where username = 'nothene' And  password = 'password';
+
+--update Library set times_visited = (times_visited + 1) where user_id = 1 and game_id = 1;
+
+select * from Library;

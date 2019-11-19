@@ -22,10 +22,12 @@ namespace OnlineGameStore
         String link = "";
         String path = "";
         String about = "";
-        public User_Games(String _name)
+        String uid = "";
+        public User_Games(String _name, String _uid)
         {
             InitializeComponent();
-            _name = name;
+            name = _name;
+            uid = _uid;
             listView1.FullRowSelect = true;
             listView2.FullRowSelect = true;
         }
@@ -59,7 +61,8 @@ namespace OnlineGameStore
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Admin.user_Profile.Show();
+            User_Profile user_Profile = new User_Profile(name, uid);
+            user_Profile.Show();
             this.Hide();
         }
 
@@ -181,7 +184,8 @@ namespace OnlineGameStore
             String @title = listView1.SelectedItems[0].Text.ToString();
             title_label.Text = title;
             title = title.Replace("'", "''");
-            String query = "Insert into Library (user_id, game_id)";
+            String query = "update Library set times_visited = (times_visited + 1) where user_id = " + uid + " and game_id = " + gid + ";";
+            String query1 = "Insert into Purchase (user_id, game_id) values (" + uid + ", " + gid + ");";
 
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -189,9 +193,18 @@ namespace OnlineGameStore
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
 
-            while (reader.Read())
-            {
-            }
+            reader.Read();
+
+            reader.Close();
+
+            command = new SqlCommand(query1, connection);
+            reader = command.ExecuteReader();
+
+            reader.Read();
+
+            reader.Close();
+            command.Dispose();
+            connection.Close();
 
             WebBrowser browser = new WebBrowser(link);
             browser.Show();

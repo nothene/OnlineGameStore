@@ -14,12 +14,16 @@ namespace OnlineGameStore
     public partial class User_Profile : Form
     {
         String name = "";
+        String uid = "";
         private Point last;
         bool mouseDown;
-        public User_Profile(String _name)
+        public User_Profile(String _name, String _uid)
         {
             InitializeComponent();
             name = _name;
+            uid = _uid;
+            listView2.FullRowSelect = true;
+            listView3.FullRowSelect = true;
         }
 
         private void Account_MouseDown(object sender, MouseEventArgs e)
@@ -49,7 +53,7 @@ namespace OnlineGameStore
             {
                 SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
-                String query = "Select user_id, username, password, balance, display_name, creation_date, total_hours, bio From Account where username = '" + name + "';";
+                String query = "Select user_id, username, password, balance, display_name, creation_date, total_hours, bio, image_path From Account where username = '" + name + "';";
                 String uid = "";
                 String uname = "";
                 String pass = "";
@@ -58,6 +62,7 @@ namespace OnlineGameStore
                 String date = "";
                 String hours = "";
                 String bio = "";
+                String path = "";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
@@ -74,6 +79,7 @@ namespace OnlineGameStore
                     date = reader[5].ToString();
                     hours = reader[6].ToString();
                     bio = reader[7].ToString();
+                    path = reader[8].ToString();
                 }
 
                 DateTime dt = DateTime.Parse(date);
@@ -83,12 +89,21 @@ namespace OnlineGameStore
                 hours_played.Text = hours;
                 label3.Text = bio;
 
+                if (path == "")
+                {
+                    pictureBox1.Image = System.Drawing.Bitmap.FromFile("D:/Game_Pictures/replace.jpg");
+                }
+                else
+                {
+                    pictureBox1.Image = System.Drawing.Bitmap.FromFile(path);
+                }
+
                 reader.Close();
                 command.Dispose();
 
                 listView2.Items.Clear();
 
-                query = "Select distinct Games.title, Library.hours_played, Games.genre, Games.link from((Library Inner Join Games on Library.game_id = Games.game_id) " +
+                query = "Select distinct Games.title, Library.times_visited, Games.genre, Games.link from((Library Inner Join Games on Library.game_id = Games.game_id) " +
                         "Inner Join Account on Library.user_id = Account.user_id) where username = '" + name + "';";
                 command = new SqlCommand(query, connection);
 
@@ -108,7 +123,7 @@ namespace OnlineGameStore
 
                 listView3.Items.Clear();
 
-                query = "Select Friend.user2_id from(Account Inner Join Friend on Account.user_id = Friend.user1_id) where user_id = " + uid + ";";
+                query = "Select distinct Friend.user2_id from(Account Inner Join Friend on Account.user_id = Friend.user1_id) where user_id = " + uid + ";";
                 command = new SqlCommand(query, connection);
 
                 reader = command.ExecuteReader();
@@ -149,7 +164,8 @@ namespace OnlineGameStore
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Admin.user_Games.Show();
+            User_Games user_Games = new User_Games(name, uid);
+            user_Games.Show();
             this.Hide();
         }
 

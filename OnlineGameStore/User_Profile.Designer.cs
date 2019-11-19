@@ -136,7 +136,6 @@
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(1041, 229);
             this.listView3.Name = "listView3";
-            this.listView3.Scrollable = false;
             this.listView3.Size = new System.Drawing.Size(210, 387);
             this.listView3.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView3.TabIndex = 6;
@@ -161,7 +160,6 @@
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(30, 230);
             this.listView2.Name = "listView2";
-            this.listView2.Scrollable = false;
             this.listView2.Size = new System.Drawing.Size(1000, 386);
             this.listView2.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView2.TabIndex = 5;
@@ -175,7 +173,7 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Hours Played";
+            this.columnHeader3.Text = "Times Played";
             this.columnHeader3.Width = 150;
             // 
             // columnHeader4
@@ -210,7 +208,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(30, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(174, 172);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

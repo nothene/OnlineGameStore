@@ -167,7 +167,6 @@
             this.listView1.Location = new System.Drawing.Point(8, 47);
             this.listView1.Margin = new System.Windows.Forms.Padding(0);
             this.listView1.Name = "listView1";
-            this.listView1.Scrollable = false;
             this.listView1.Size = new System.Drawing.Size(236, 584);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 46;
@@ -225,7 +224,6 @@
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(731, 435);
             this.listView2.Name = "listView2";
-            this.listView2.Scrollable = false;
             this.listView2.Size = new System.Drawing.Size(275, 180);
             this.listView2.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView2.TabIndex = 88;

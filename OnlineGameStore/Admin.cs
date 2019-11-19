@@ -105,22 +105,24 @@ namespace OnlineGameStore
             {
                 SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-FC8BFOQ9\SQLEXPRESS; Database=OnlineGameStore; Integrated Security=SSPI;");
 
-                String query = @"Select count(*) from Games";
-
+                String query = "Select user_id from Account where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "';";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
 
-                reader.Read();
+                String uid = "";
 
-                int cnt = Convert.ToInt32(reader[0].ToString());
-
-                if(cnt > 0)
+                while (reader.Read())
                 {
-                    user_Games = new User_Games(textBox1.Text);
-                    user_Profile = new User_Profile(textBox1.Text);
-                    user_Games.Show();
+                    uid = reader[0].ToString();
+                }
+
+                if(uid.Length > 0)
+                {
+                    //user_Games = new User_Games(textBox1.Text, uid);
+                    user_Profile = new User_Profile(textBox1.Text, uid);
+                    user_Profile.Show();
                     this.Hide();
                 } else
                 {
